@@ -7,8 +7,16 @@ const mode =
 module.exports = {
   mode,
 
+  output: {
+    assetModuleFilename: "images/[hash][ext][query]",
+  },
+
   module: {
     rules: [
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: "asset/resource",
+      },
       {
         test: /\.(s[ac]|c)ss$/i,
         use: [
