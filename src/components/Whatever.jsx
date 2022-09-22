@@ -6,6 +6,7 @@ const Whatever = () => {
   return (
     <div>
       <h1>{state}</h1>
+      <button onClick={() => setState("Button Clicked")}>Click Me</button>
     </div>
   )
 }
